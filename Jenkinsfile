@@ -4,7 +4,7 @@ node{
          git 'https://github.com/LovesCloud/java-tomcat-maven-example'
        
       }  
-      def mvnHome = tool 'M3
+      def mvnHome = tool 'M3'
       stage('Build'){
          //// Get maven home path and build
         

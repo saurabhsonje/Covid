@@ -6,7 +6,7 @@ node{
       }  
       //def mvnHome = tool 'M3'
       stage('Build'){
-      def mvnHome = tool 'maven 3.6.3', type: 'maven'
+      def mvnHome = tool 'maven 3.6.3'
            
          //// Get maven home path and build
         //def mvnHome = tool 'M3'

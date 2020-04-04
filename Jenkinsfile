@@ -6,7 +6,8 @@ node{
       }  
       stage('Build'){
          //// Get maven home path and build
-        def mvnHome = tool type: 'maven'    
+        
+        def mvnHome = tool 'M3'
         sh "${mvnHome}/bin/mvn clean package -Dmaven.test.skip=true"
       }
      

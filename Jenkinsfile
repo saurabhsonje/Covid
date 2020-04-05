@@ -23,12 +23,13 @@ node{
       stage ('Test-JUnit'){
          // sh "'${mvnHome}/bin/mvn test; sleep 3"
             sh "'${mvnHome}/bin/mvn' test surefire-report:report"
+              echo "Test done"
       }  
      
       stage('Deploy') {     
             sshagent(['Tomcat-jenkins']) {
-               sh 'scp -o StrictHostKeyChecking=no target/tomcatdeploymnetdemo.war saurabh@54.163.29.126:usr/share/nginx/html'
-                 echo "deploy down "
+               sh 'scp -o StrictHostKeyChecking=no target/tomcatdeploymnetdemo.war saurabh@18.212.21.90:/opt/tomcat/webapps'
+                 echo "deployment done "
               
           }
          

@@ -19,6 +19,10 @@ node{
            echo "build down "
         
       }
+      
+      stage ('Test-JUnit'){
+         sh "'${mvnHome}/bin/mvn' test surefire-report:report"
+      }  
      
       stage('Deploy') {     
             sshagent(['Tomcat-jenkins']) {

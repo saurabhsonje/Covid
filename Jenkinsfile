@@ -27,7 +27,7 @@ node{
       }  
      
       stage('Deploy') {     
-            sshagent(['Tomcat-jenkins']) {
+            sshagent(['webserver']) {
                sh 'scp -o StrictHostKeyChecking=no target/tomcatdeploymnetdemo.war saurabh@18.212.21.90:/opt/tomcat/webapps'
                  echo "deployment done "
               

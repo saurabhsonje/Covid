@@ -28,7 +28,7 @@ node{
      
       stage('Deploy') {     
             sshagent(['webserver']) {
-               sh 'scp -o StrictHostKeyChecking=no target/tomcatdeploymnetdemo.war saurabh@18.212.21.90:/opt/tomcat/webapps'
+               sh 'ssh -o StrictHostKeyChecking=no target/tomcatdeploymnetdemo.war saurabh@18.212.21.90:/opt/tomcat/webapps'
                  echo "deployment done "
               
           }

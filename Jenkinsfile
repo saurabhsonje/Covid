@@ -14,7 +14,8 @@ node{
         //def mvnHome = tool 'M3'
         //sh "${mvnHome}/bin/mvn clean package -Dmaven.test.skip=true"
        // sh "${mvnHome}/bin/mvn clean package -Dmaven.test.skip=true"
-         sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
+         //sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
+         sh "${mvnHome}/bin/mvn package"   
            echo "build down "
         
       }

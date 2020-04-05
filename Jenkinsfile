@@ -21,7 +21,8 @@ node{
       }
       
       stage ('Test-JUnit'){
-          sh "'${mvnHome}/bin/mvn test; sleep 3"
+         // sh "'${mvnHome}/bin/mvn test; sleep 3"
+            sh "'${mvnHome}/bin/mvn' test surefire-report:report"
       }  
      
       stage('Deploy') {     

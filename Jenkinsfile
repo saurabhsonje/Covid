@@ -1,13 +1,14 @@
 node{
-     
+      def mvnHome
       stage('Checkout'){
          git 'https://github.com/LovesCloud/java-tomcat-maven-example'
+           mvnHome = tool 'MAVEN3'
            echo "checkout down "
        
       }  
       //def mvnHome = tool 'M3'
       stage('Build'){
-      def mvnHome = tool 'maven 3.6.3'
+      
            
          //// Get maven home path and build
         //def mvnHome = tool 'M3'

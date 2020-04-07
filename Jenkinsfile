@@ -34,9 +34,10 @@ node{
                 // sh 'scp -o StrictHostKeyChecking=no /home/ec2-user/bq saurabh@34.201.126.183:/tmp/'
                  // sh 'scp -o StrictHostKeyChecking=no target/tomcatdeploymnetdemo.war saurabh@18.207.247.230:/tmp/'
                  // sh 'ssh  saurabh@18.207.247.230:"sudo su ; cp /tmp/tomcatdeploymnetdemo.war /opt/tomcat/webapps/" '
+                  sh 'ssh-copy-id -i /home/.ssh/id_rsa.pub  saurabh@3.82.229.255'
                   sh 'ssh saurabh@3.82.229.255'
-	            sh 'scp -o StrictHostKeyChecking=no /home/ec2-user/bq saurabh@3.82.229.255:/tmp/'
-                 echo "deployment done "
+	          sh 'scp -o StrictHostKeyChecking=no /home/ec2-user/bq saurabh@3.82.229.255:/tmp/'
+                  echo "deployment done "
               
           }
          
